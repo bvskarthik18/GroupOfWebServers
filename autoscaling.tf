@@ -1,6 +1,6 @@
 resource "aws_autoscaling_group" "demo" {
   launch_configuration = aws_launch_configuration.demo.name
-  vpc_zone_identifier  = data.aws_subnet_ids.default.ids
+  vpc_zone_identifier  = data.aws_subnet.default.ids
   min_size = 2
   max_size = 5
   tag {
